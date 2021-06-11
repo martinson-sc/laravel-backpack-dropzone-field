@@ -18,7 +18,7 @@ Currently, you can only manage media while editing an entry.
 ### Via Composer
 
 ``` bash
-composer require julienmru/laravel-backpack-dropzone-field
+composer require julienmru/laravel-backpack-dropzone-field:3.0.0-beta
 ```
 
 Publish assets:
