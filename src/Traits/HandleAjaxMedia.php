@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaspertrix\Backpack\DropzoneField\Traits;
+namespace JulienMru\BackpackDropzoneField\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;

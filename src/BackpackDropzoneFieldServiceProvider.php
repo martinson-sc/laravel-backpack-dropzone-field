@@ -1,13 +1,13 @@
 <?php
 
-namespace Gaspertrix\Backpack\DropzoneField;
+namespace JulienMru\BackpackDropzoneField;
 
 use Illuminate\Support\ServiceProvider;
 
-class DropzoneFieldServiceProvider extends ServiceProvider
+class BackpackDropzoneFieldServiceProvider extends ServiceProvider
 {
     protected $commands = [
-        \Gaspertrix\Backpack\DropzoneField\App\Console\Commands\Install::class,
+        \JulienMru\BackpackDropzoneField\app\Console\Commands\Install::class,
     ];
 
     /**
@@ -15,17 +15,13 @@ class DropzoneFieldServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(\Illuminate\Routing\Router $router)
     {
-        if ($this->app->runningInConsole()) {
-            $this->commands($this->commands);
-        }
-
         // publish field
         $this->publishes([__DIR__.'/resources/views' => resource_path('views/vendor/backpack/crud')], 'views');
 
         // publish public assets
-        $this->publishes([__DIR__ . '/public' => public_path('vendor/gaspertrix/laravel-backpack-dropzone-field')], 'public');
+        $this->publishes([__DIR__ . '/public' => public_path('vendor/julienmru/laravel-backpack-dropzone-field')], 'public');
     }
 
     /**
@@ -35,6 +31,7 @@ class DropzoneFieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register the artisan commands
+        $this->commands($this->commands);
     }
 }

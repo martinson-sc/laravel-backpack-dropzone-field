@@ -6,9 +6,9 @@ Add Dropzone support for [Laravel Backpack](https://laravel-backpack.readme.io/d
 - [Laravel Backpack](https://laravel-backpack.readme.io/docs)
 	- [Installation](https://backpackforlaravel.com/docs/4.0/installation "Installation")
 	- [Getting Started](https://backpackforlaravel.com/docs/4.0/introduction "Getting Started")
-- [Spatie Laravel Medialibrary](https://docs.spatie.be/laravel-medialibrary/v7/)
-	- [Installation & setup](https://docs.spatie.be/laravel-medialibrary/v7/installation-setup "Installation & setup")
-	- [Basic usage - Preparing your model](https://docs.spatie.be/laravel-medialibrary/v7/basic-usage/preparing-your-model "Basic usage - Preparing your model")
+- [Spatie Laravel Medialibrary](https://spatie.be/docs/laravel-medialibrary/v9/introduction)
+	- [Installation & setup](https://spatie.be/docs/laravel-medialibrary/v9/installation-setup "Installation & setup")
+	- [Basic usage - Preparing your model](https://spatie.be/docs/laravel-medialibrary/v9/basic-usage/preparing-your-model "Basic usage - Preparing your model")
 
 ## Limitations
 Currently, you can only manage media while editing an entry.
@@ -18,12 +18,12 @@ Currently, you can only manage media while editing an entry.
 ### Via Composer
 
 ``` bash
-composer require gaspertrix/laravel-backpack-dropzone-field
+composer require julienmru/laravel-backpack-dropzone-field
 ```
 
 Publish assets:
 ``` bash
-php artisan gaspertrix:backpack:dropzone:install
+php artisan julienmru:backpackdropzonefield:install
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ For simplicity add the `HandleAjaxMedia` trait to all EntityCrudController.
 
 ...
 
-use Gaspertrix\Backpack\DropzoneField\Traits\HandleAjaxMedia;
+use JulienMru\BackpackDropzoneField\Traits\HandleAjaxMedia;
 
 ...
 
