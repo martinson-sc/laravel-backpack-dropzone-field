@@ -19,10 +19,16 @@
             "email": "adrian@gaspertrix.com",
             "homepage": "https://www.gaspertrix.com/",
             "role": "Developer"
+        },
+        {
+            "name": "Julien Tessier",
+            "email": "mail@julien.expert",
+            "homepage": "https://github.com/julienmru",
+            "role": "Developer"
         }
     ],
     "require": {
-        "backpack/crud": "^4.0.0",
+        "backpack/crud": "^4.1.0",
         "spatie/laravel-medialibrary": "^9.0.0"
     },
     "require-dev": {
